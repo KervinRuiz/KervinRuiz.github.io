@@ -1,0 +1,582 @@
+body {
+	background-color: black;
+	font-family: 'Poppins', sans-serif;
+  margin: auto;
+  color: white;
+}
+
+/* INICIO DE LA SECCION HEADER */
+
+.header__Container {
+    display: flex; /* se invoca el modulo unidimensional de layout: caja flexible */
+    align-items: center; /* se alinean items verticalmente en "y" */
+    background-color: black; /* color fondo sección */
+}
+
+.logo__Img {
+    width: 10%; /* tamaño del logo */
+    padding: 0 3%;
+}
+
+.navbar {
+    display:flex;
+    width: 92%; /* restante asignado a la navbar */
+    justify-content: flex-end; /* alinea link acia el final de la fila */
+
+}
+
+.navbar__Links {
+    display: flex;
+    width: 10%; /* ancho de cada link */
+    text-decoration: none; /* eliminar el subrayado del link */
+    color: white; /* color letra de cada link */
+    justify-content: center;
+
+}
+
+/* INICIA PERSONALIZACION DE LA CLASE BOTÓN EN ARAS DE ANIMARLA */
+
+.button {
+    /*font-size: 17px;*/
+    background: transparent; /* para que aqdopte el color de fondo de la pagina */
+    border: none; /* para que elimine el borde del botón */
+    padding: 1em; /* para definir el tamaño del botón */
+    position: relative; /* indica que es un elemento posicionado y que los pseudoelementos se sicionan teniendolo como referencia. */
+    transition: .5s ease; /* duracion y efecto de la animacion */
+    z-index: 2; /* el elemento tiene prelacion sobre los pseudoelementos */
+  }
+  
+  .button::before { /* pseudoelemento para crear la línea animada que se extiende */
+    content: ''; /* no tendrá ningún contenido */
+    position: absolute; /* se ubicará en relacion con el elemento padre que es el botón */
+    left: 0; /* la linea inicia en el valor 0 de la parte izq */
+    bottom: 0; /* la linea inicia en el valor 0 de la parte de abajo */
+    height: 2px; /* el grosor de la línea */
+    width: 0; /*la línea inicia no mostrandose (para la animacion)*/
+    background-color: #fcfcfc; /* indica el color de la linea */
+    transition: .5s ease; /* duracion y efecto de la animacion */
+    z-index: -1; /* la prelacion es por debajo del botón */
+  }
+  
+  .button:hover { /* cuando el mouse se pone sobre el botón */
+    color: black; /* color del texto que mostrará */
+    transition-delay: .5s; /* que tan lenta será la animacion */
+    
+  }
+  
+  .button:hover::before { /* funciona cuando el mouse se coloca sobre el boton*/
+    width: 100%; /* hace que la línea se extienda de lado a lado hasta que se complete */ 
+    
+  }
+  
+  .button::after { /*para el inicio de la animacion */
+    content: ''; /*sin contenido*/
+    position: absolute; /* se ubica según su padre*/
+    left: 0; /* la linea inicia en el valor 0 de la parte izq */
+    bottom: 0; /* la linea inicia en el valor 0 de la parte de abajo */
+    height: 0; /* el grosor de la línea al inicio */
+    width: 100%; /* indica que ocupará todo el espacio de lado a lado */
+    transition: .4s ease; /* duracion y efecto de la transicion */
+    z-index: -2; /* configura que el elemento quede detrás de los demás */
+    border-radius: 3px 3px 0 0; /* redondear bordes solo superiores */
+  }
+  
+  .button:hover::after {
+    height: 100%; /* indica la altura a la que se extenderá el fondo rojo */
+    transition-delay: 0.4s; /*retraso de la animacion */
+    background-color: rgb(47, 255, 144); /* color de fondo que se extiende */
+  }
+  
+  /* FIN DE LA SECCION HEADER */
+
+
+/* INICIO DE LA SECCION BANNER */
+
+.banner {
+  display: flex;
+  
+}
+
+.banner__Texts-Button {
+  background: rgb(47, 255, 144);
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 1rem;
+  border: none;
+  margin: 10% 0 5% 10%;
+}
+
+.banner__Texts-Button:hover {
+  background: rgb(47, 255, 144);
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(47, 255, 144),
+        0 0 25px rgb(47, 255, 144),
+        0 0 50px rgb(47, 255, 144),
+        0 0 100px rgb(47, 255, 144);
+}
+
+.banner__Texts-Title {
+  margin: 5% 0 5% 10%;
+  font-size: 3rem;
+  width: 100%;
+}
+
+.banner__Texts-Subtitle {
+  margin: 10% 0 5% 10%;
+  font-size: 1.5rem;
+}
+
+.banner__Texts-Paragraph {
+  margin: 10%;
+  line-height: 1.5rem;
+  font-size: smaller;
+  font-weight: 200;
+  letter-spacing: 1px;
+  opacity: 60%;
+  width: 100%;
+  /* text-shadow: 1px 1px 1px rgb(0, 0, 0); */
+}
+
+.banner__Container-Rrss {
+  display: flex;
+  width: 480px;
+  height: 200px;
+  margin-left: 10%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.banner__Container-Rrss-logos{
+  width: 70px;
+  height: 50px;
+  border-radius: 30px;
+
+
+}
+
+.banner__Image {
+  background-image: url('../img/Foto.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 85vh;
+  width: 30%;
+  margin: auto;
+
+}
+
+.about-me {
+  display: flex;
+  width: 100%;
+}
+
+.about__Progress-Container {
+  padding: 3% 0 3% 5%;
+  width: 50%;
+  line-height: 1.5rem;
+}
+
+.about__Container {
+  padding: 3% 0 3% 5%;
+  width: 80%;
+}
+
+.about__Progress-Title {
+  margin: 2rem 0rem;
+  font-size: xx-large;
+}
+
+progress {
+  width: 80%; /* ancho del espacio de la barra */
+  height: 10px; /* alto de la barra */
+  background: rgb(47, 255, 144); /* fondo de la barra*/
+  padding: 0.1rem; /*separacion interna */ 
+  border-radius: 5px; /*borde redondeado */
+}
+
+.about__Progress-Bar-List {
+  animation: progress 15s linear forwards; /*nombre de la animacion, duracion, tipo movimiento, direccion */
+}
+
+@keyframes progress { /*nombre de la animacion */
+  from { width: 50%; } /*la barra debe comenzar en*/
+  to { width: 100%; } /*la animacion de la barra termina en lo que se parametrizó*/
+}
+
+progress::-webkit-progress-value {
+  background-color: rgb(47, 255, 144); /* el color de la barra de progreso */
+}
+
+.about__Container-Title {
+  margin: 2rem;
+  font-size: xx-large;
+  width: 50%;
+}
+
+.about__Container-Paragraph {
+  margin: 2rem;
+  width: 80%;
+  line-height: 2rem;
+  font-weight: 200;
+  opacity: 60%;
+}
+
+.about__Container-Subtitle {
+  margin: 2rem;
+  font-size: large;
+}
+
+.about__Container-Table {
+  margin: 0 5%;
+  line-height: 2rem; /* espacio de interlineado */
+  font-weight: 200; /* como una negrilla al texto */
+  width: 90%; /* espacio a utilizar */
+  opacity: 60%; /* nivel de opacidad del contenido de la tabla */
+  
+}
+
+th, td {
+  letter-spacing: 1px; /* espaciado de las letras para que sea más legible */
+}
+
+ .contacto {
+  color: white;
+  text-decoration: none; /* eliminar el subrayado de los links */
+  cursor: pointer; /* a manito cuando el ursor está sobre un link */
+}
+
+.about__Container-CV {
+  position: relative;
+  width: 8rem;
+}
+
+.about__Container-CV-Button {
+  display: inline-block;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border-radius: 3px;
+  margin: 20% 5% 10% 27%;
+  padding: 15px;
+  border: 2px solid rgb(47, 255, 144);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(47, 255, 144);
+  position: relative;
+  width: 8rem;
+}
+
+.about__Container-CV-Button:hover {
+  background: rgb(47, 255, 144);
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(47, 255, 144),
+        0 0 25px rgb(47, 255, 144),
+        0 0 50px rgb(47, 255, 144),
+        0 0 100px rgb(47, 255, 144);
+}
+
+
+
+/* FIN DE LA SECCION ABOUT */
+
+
+/* INICIA SECCION MY SKILLS */
+
+.my-Skills__title {
+  font-size: xx-large;/* tamaño de la fuente */
+  width: 100%; /* espacio de ancho a utilizar*/
+  text-align: center; /* centra el texto en el espacio asignado */
+  padding: 3rem 0; /* espaciado vertical */
+}
+
+.my-skills__Containers-Group {
+  display: flex; 
+  flex-direction: row; /* disposición de la orientación de todos los containers */ 
+  flex-wrap: wrap; /* según el tamaño de la ventana se auto ajustan enviando los divs restantes abajo. */
+}
+
+.my-Skills__Container {
+  display: flex;
+  width: calc(100% / 10);/* ancho del container */
+  height: 25%; /* altura del circular progress */
+  padding: 20px 0; /* padding sup e inf, laterales */
+  border-radius: 8px; /*borde redondeado del container*/
+  background: rgba(92, 86, 86, 0.778); /* fondo del container*/
+  row-gap: 20px; /* espacio vertical entre el circular bar y el texto */
+  flex-direction: column; /* orientacion del circular progress */
+  align-items: center; /* centra elementos en el container*/
+  margin: 2% 1% 2% 5%;
+
+}
+
+.my-Skills__Circular-Bar {
+  position: relative; /* determino ubicacion */
+  height: 90px; /* altura del circulo externo */
+  width: 90px; /* ancho del circulo externo */
+  border-radius: 50%; /*borde redondeado */
+  background: conic-gradient( red 3.6deg, rgb(47, 255, 144) 0deg); /* colores del circular progress*/
+  display: flex;
+  align-items: center; /*centrado de elementos en y */
+  justify-content: center; /*centrado de elementos en y */
+}
+
+.my-Skills__Circular-Bar::before {
+  content: "";
+  position: absolute; /* su ubicacion estará por dentro de la posicion del elemento padre */
+  height: 70px; /* altura del circulo interno */
+  width: 70px; /* ancho del circulo interno */
+  border-radius: 50%; /* borde redondeado */ 
+  background-color: #fff; /* color de fondo del centro del circular bar */
+}
+
+.my-Skills__Circular-Bar__Progress-value {
+  position: relative;
+  font-size: 20px; /* tamaño de letra del porcentaje */
+  font-weight: 600; /* negrilla del porcentaje */
+  color: rgb(0, 0, 0); /* color del porcentaje */
+
+}
+
+.my-Skills__Circular-Bar__Header-Text {
+  font-size: 15px; /* tamaño del texto del Skill */
+  font-weight: 500; /* negrilla del texto */
+  color: #fff; /* color del texto del header */
+  text-align: center;
+}
+
+/* FIN DE LA SECCION MY SKILLS */
+
+/* INICIO DE LA SECCION PORTFOLIO */
+
+.portfolio__Title {
+  font-size: xx-large;/* tamaño de la fuente */
+  width: 100%; /* espacio de ancho a utilizar*/
+  text-align: center; /* centra el texto en el espacio asignado */
+  padding: 4rem 0; /* espaciado vertical */
+}
+
+.portfolio__{
+  display: flex;
+  align-items: center;
+}
+
+
+
+.portfolio__Text-Right {
+  margin: 0 15%;
+  padding: 0 0 1rem 0;
+}
+
+.portfolio__Text-Description-Right {
+  margin-left: 15%;
+  padding: 1rem 1rem 2rem 0;
+  line-height: 1.5rem;
+}
+.portfolio__Text-Left {
+  margin-left: 15%;
+  padding: 0 0 1rem 0;
+}
+
+.portfolio__Text-Description-Left {
+  margin-left: 15%;
+  padding: 1rem 0 2rem 0;
+  line-height: 1.5rem;
+}
+
+
+
+.portfolio__Img {
+  width: 700px;
+  height: 400px;
+  align-items: flex-end;
+  margin: 5% 5% 5% 5%;
+  box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
+  border-radius: 5px;
+}
+
+.portfolio__Mini {
+  display: flex;
+  align-items: center;
+}
+
+.portfolio__Mini-Img {
+  width: 700px;
+  height: 400px;
+  margin: 5% 0 5% 5%;
+  box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
+  border-radius: 5px;
+}
+
+.portfolio__Apeperia{
+  display: flex;
+  align-items: center;
+}
+
+.portfolio__Apeperia-Img {
+  width: 700px;
+  height: 400px;
+  align-items: flex-end;
+  margin: 5% 5% 5% 5%;
+  box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
+  border-radius: 5px;
+}
+
+.portfolio__Portfolio {
+  display: flex;
+  align-items: center;
+}
+
+.portfolio__Portfolio-Img {
+  width: 700px;
+  height: 400px;
+  margin: 5% 0 5% 5%;
+  box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
+  border-radius: 5px;
+}
+
+.portfolio__Encoder{
+  display: flex;
+  align-items: center;
+}
+
+.portfolio__Encoder-Img {
+  width: 700px;
+  height: 400px;
+  align-items: flex-end;
+  margin: 5% 5% 5% 5%;
+  box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
+  border-radius: 5px;
+}
+
+.portfolio__Paint {
+  display: flex;
+  align-items: center;
+}
+
+.portfolio__Paint-Img {
+  width: 700px;
+  height: 400px;
+  margin: 5% 0 5% 5%;
+  box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
+  border-radius: 5px;
+}
+
+.portfolio__Button {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  background: rgb(47, 255, 144);
+  border: none;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 0.5rem 3rem;
+  margin: 0 15%;
+  text-decoration: none;
+}
+
+.portfolio__Button:hover {
+  background: rgb(47, 255, 144);
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(47, 255, 144),
+        0 0 25px rgb(47, 255, 144),
+        0 0 50px rgb(47, 255, 144),
+        0 0 100px rgb(47, 255, 144);
+}
+
+/* FIN DE LA SECCION PORTAFOLIO */
+
+/* INICIO DE LA SECCION FORMULARIO */
+
+.form__Title {
+  font-size: xx-large;/* tamaño de la fuente */
+  width: 100%; /* espacio de ancho a utilizar*/
+  text-align: center; /* centra el texto en el espacio asignado */
+  padding: 4rem 0; /* espaciado vertical */
+}
+
+.form_Container {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin: auto;
+}
+
+form {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #222;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form__Label {
+  background: rgb(47, 255, 144);
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 1rem;
+  border: none;
+  margin: 10% 0 5% 0;
+  width: 10rem;
+  justify-content: center;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgb(47, 255, 144);
+}
+
+.form__Button {
+  display: inline-block;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border-radius: 3px;
+  margin: auto;
+  padding: 15px;
+  border: 2px solid rgb(47, 255, 144);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(47, 255, 144);
+  position: relative;
+  width: 8rem;
+}
+
+.form__Button:hover {
+  background: rgb(47, 255, 144);
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(47, 255, 144),
+        0 0 25px rgb(47, 255, 144),
+        0 0 50px rgb(47, 255, 144),
+        0 0 100px rgb(47, 255, 144);
+}
+
+.input-message-error {
+  display: none; /* ocultar el mensaje de error por defecto */
+  color: red; /* color de texto del mensaje de error */
+  font-size: 14px; /* tamaño de fuente del mensaje de error */
+  margin-top: 5px; /* margen superior del mensaje de error */
+}
+
