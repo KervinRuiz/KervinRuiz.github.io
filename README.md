@@ -62,36 +62,36 @@
                 <h2 class = "about__Progress-Title">Mis Fortalezas</h2>
                 <ul class = "about__Progress-Bar-List">
                   <li>
-                    <progress id="progressBar1" value="95" max="100"></progress>
                     <h2>Reponsable</h2>
+                    <br>
                   </li>
                   <li>
-                    <progress id="progressBar2" value="85" max="100"></progress>
                     <h2>Puntual</h2>
+                    <br>
                   </li>
                   <li>
-                    <progress id="progressBar3" value="95" max="100"></progress>
                     <h2>Autodidacta</h2>
+                    <br>
                   </li>
                   <li>
-                    <progress id="progressBar4" value="90" max="100"></progress>
                     <h2>Habilidades de Comunicación</h2>
+                    <br>
                   </li>
                   <li>
-                    <progress id="progressBar5" value="100" max="100"></progress>
                     <h2>Programación</h2>
+                    <br>
                   </li>
                   <li>
-                    <progress id="progressBar7" value="80" max="100"></progress>
                     <h2>Trabajo en equipo</h2>
+                    <br>
                   </li>
                   <li>
-                    <progress id="progressBar8" value="90" max="100"></progress>
                     <h2>Atencion al detalle</h2>
+                    <br>
                   </li>
                   <li>
-                    <progress id="progressBar10" value="80" max="100"></progress>
                     <h2>Escucha atenta</h2>
+                    <br>
                   </li>
                 </ul>
             </div>
@@ -125,7 +125,7 @@
                     </tbody>
                 </table>
                 <div class = "about__Container-CV">
-                    <a href="https://inacr-my.sharepoint.com/:b:/g/personal/208060041_ina_cr/ERvekl2nWf9Ei3hEjzlUwFwBErBfUVc5IJAlkx4Q5pMv7A?e=I6bKHU=downloand" target="_blank"    class="about__Container-CV-Button">VER CV</a>
+                    <a href="https://inacr-my.sharepoint.com/:b:/g/personal/208060041_ina_cr/EVKywiqdhZdMn5Bg7gUXjR8BxCfos9EeZJyCCc-eRxi_iA?e=Hf7Bkr" target="_blank"    class="about__Container-CV-Button">VER CV</a>
                 </div>
             </div>
         </section>
@@ -430,3 +430,4 @@
     <script src="./Js/app.js" type="module"></script>
 </body>
 </html>
+
