@@ -1,0 +1,429 @@
+<section class="contacto">
+  <div class="contenedor">
+
+    <header class="encabezado-seccion">
+
+      @if (idiomaService.esEspanol()) {
+
+        <span>Hablemos</span>
+
+        <h1>Contáctame</h1>
+
+        <p>
+          Estoy disponible para oportunidades laborales, proyectos de
+          desarrollo de software, colaboraciones y consultas profesionales.
+        </p>
+
+      } @else {
+
+        <span>Let's talk</span>
+
+        <h1>Contact me</h1>
+
+        <p>
+          I am available for job opportunities, software development
+          projects, collaborations and professional inquiries.
+        </p>
+
+      }
+
+    </header>
+
+    <div class="contacto-grid animar-entrada">
+
+      <div class="informacion-contacto">
+
+        @if (idiomaService.esEspanol()) {
+
+          <span class="etiqueta">
+            Información de contacto
+          </span>
+
+          <h2>
+            ¿Tienes una idea o una oportunidad?
+          </h2>
+
+          <p class="descripcion">
+            Puedes comunicarte conmigo por correo, LinkedIn o WhatsApp.
+            Responderé tan pronto como sea posible.
+          </p>
+
+        } @else {
+
+          <span class="etiqueta">
+            Contact information
+          </span>
+
+          <h2>
+            Do you have an idea or an opportunity?
+          </h2>
+
+          <p class="descripcion">
+            You can contact me by email, LinkedIn or WhatsApp.
+            I will reply as soon as possible.
+          </p>
+
+        }
+
+        <div class="medios-contacto">
+
+          <a
+            href="mailto:kervin.21ruiz@gmail.com"
+            class="medio-card"
+          >
+            <div class="icono">
+              @
+            </div>
+
+            <div>
+
+              <span>
+                @if (idiomaService.esEspanol()) {
+                  Correo electrónico
+                } @else {
+                  Email
+                }
+              </span>
+
+              <strong>
+                kervin.21ruiz@gmail.com
+              </strong>
+
+            </div>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/kervin-rostran"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="medio-card"
+          >
+            <div class="icono">
+              in
+            </div>
+
+            <div>
+              <span>LinkedIn</span>
+              <strong>Kervin Rostrán Ruiz</strong>
+            </div>
+          </a>
+
+          <a
+            href="https://github.com/KervinRuiz"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="medio-card"
+          >
+            <div class="icono">
+              GH
+            </div>
+
+            <div>
+              <span>GitHub</span>
+
+              <strong>
+                @if (idiomaService.esEspanol()) {
+                  Ver repositorios
+                } @else {
+                  View repositories
+                }
+              </strong>
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/50660814537"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="medio-card"
+          >
+            <div class="icono">
+              WA
+            </div>
+
+            <div>
+              <span>WhatsApp</span>
+              <strong>+506 6081-4537</strong>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="disponibilidad">
+
+          <span class="estado"></span>
+
+          <p>
+            @if (idiomaService.esEspanol()) {
+              Disponible para oportunidades laborales y proyectos.
+            } @else {
+              Available for job opportunities and projects.
+            }
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="formulario-contenedor">
+
+        <form
+          class="formulario"
+          #formularioContacto="ngForm"
+          (ngSubmit)="enviarMensaje()"
+        >
+
+          <div class="formulario-encabezado">
+
+            @if (idiomaService.esEspanol()) {
+
+              <span>Envíame un mensaje</span>
+
+              <h2>
+                Cuéntame cómo puedo ayudarte
+              </h2>
+
+            } @else {
+
+              <span>Send me a message</span>
+
+              <h2>
+                Tell me how I can help you
+              </h2>
+
+            }
+
+          </div>
+
+          <div class="grupo-doble">
+
+            <div class="grupo-formulario">
+
+              <label for="nombre">
+
+                @if (idiomaService.esEspanol()) {
+                  Nombre completo
+                } @else {
+                  Full name
+                }
+
+              </label>
+
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                [(ngModel)]="formulario.nombre"
+                [placeholder]="
+                  idiomaService.esEspanol()
+                    ? 'Escribe tu nombre'
+                    : 'Enter your name'
+                "
+                required
+                minlength="3"
+                #nombre="ngModel"
+              >
+
+              @if (nombre.invalid && nombre.touched) {
+
+                <small class="mensaje-error">
+
+                  @if (idiomaService.esEspanol()) {
+                    Ingresa un nombre válido.
+                  } @else {
+                    Enter a valid name.
+                  }
+
+                </small>
+
+              }
+
+            </div>
+
+            <div class="grupo-formulario">
+
+              <label for="correo">
+
+                @if (idiomaService.esEspanol()) {
+                  Correo electrónico
+                } @else {
+                  Email
+                }
+
+              </label>
+
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                [(ngModel)]="formulario.correo"
+                placeholder="correo@ejemplo.com"
+                required
+                email
+                #correo="ngModel"
+              >
+
+              @if (correo.invalid && correo.touched) {
+
+                <small class="mensaje-error">
+
+                  @if (idiomaService.esEspanol()) {
+                    Ingresa un correo válido.
+                  } @else {
+                    Enter a valid email address.
+                  }
+
+                </small>
+
+              }
+
+            </div>
+
+          </div>
+
+          <div class="grupo-formulario">
+
+            <label for="asunto">
+
+              @if (idiomaService.esEspanol()) {
+                Asunto
+              } @else {
+                Subject
+              }
+
+            </label>
+
+            <input
+              type="text"
+              id="asunto"
+              name="asunto"
+              [(ngModel)]="formulario.asunto"
+              [placeholder]="
+                idiomaService.esEspanol()
+                  ? 'Motivo del mensaje'
+                  : 'Message subject'
+              "
+              required
+              minlength="4"
+              #asunto="ngModel"
+            >
+
+            @if (asunto.invalid && asunto.touched) {
+
+              <small class="mensaje-error">
+
+                @if (idiomaService.esEspanol()) {
+                  Ingresa el asunto del mensaje.
+                } @else {
+                  Enter the subject of the message.
+                }
+
+              </small>
+
+            }
+
+          </div>
+
+          <div class="grupo-formulario">
+
+            <label for="mensaje">
+
+              @if (idiomaService.esEspanol()) {
+                Mensaje
+              } @else {
+                Message
+              }
+
+            </label>
+
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              [(ngModel)]="formulario.mensaje"
+              rows="7"
+              [placeholder]="
+                idiomaService.esEspanol()
+                  ? 'Escribe los detalles de tu mensaje'
+                  : 'Write the details of your message'
+              "
+              required
+              minlength="10"
+              #mensaje="ngModel"
+            ></textarea>
+
+            @if (mensaje.invalid && mensaje.touched) {
+
+              <small class="mensaje-error">
+
+                @if (idiomaService.esEspanol()) {
+                  El mensaje debe tener al menos 10 caracteres.
+                } @else {
+                  The message must contain at least 10 characters.
+                }
+
+              </small>
+
+            }
+
+          </div>
+
+          <button
+            type="submit"
+            class="boton-enviar"
+            [disabled]="formularioContacto.invalid || enviando"
+          >
+
+            @if (enviando) {
+
+              @if (idiomaService.esEspanol()) {
+                Enviando...
+              } @else {
+                Sending...
+              }
+
+            } @else {
+
+              @if (idiomaService.esEspanol()) {
+                Enviar mensaje
+              } @else {
+                Send message
+              }
+
+            }
+
+          </button>
+
+          @if (mensajeExito) {
+
+            <p class="mensaje-exito">
+              {{ mensajeExito }}
+            </p>
+
+          }
+
+          @if (mensajeError) {
+
+            <p class="mensaje-envio-error">
+              {{ mensajeError }}
+            </p>
+
+          }
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<a
+  href="https://wa.me/50660814537?text=Hola%20Kervin,%20vi%20tu%20portafolio%20y%20quisiera%20contactarte."
+  target="_blank"
+  rel="noopener noreferrer"
+  class="whatsapp-flotante"
+  aria-label="Contactar por WhatsApp"
+>
+  WA
+</a>

@@ -1,0 +1,468 @@
+<section class="sobre-mi">
+  <div class="contenedor">
+
+    <header class="encabezado-seccion">
+
+      @if (idiomaService.esEspanol()) {
+
+        <span>Perfil profesional</span>
+
+        <h1>Sobre mí</h1>
+
+        <p>
+          Conoce mi perfil, formación, intereses y objetivos dentro del
+          desarrollo de software.
+        </p>
+
+      } @else {
+
+        <span>Professional profile</span>
+
+        <h1>About me</h1>
+
+        <p>
+          Learn about my professional profile, education, interests and
+          goals within software development.
+        </p>
+
+      }
+
+    </header>
+
+    <div class="perfil-grid animar-entrada">
+
+      <div class="perfil-imagen">
+        <div class="marco-imagen">
+          <img
+            src="/images/perfil-kervin.jpg"
+            alt="Fotografía profesional de Kervin Rostrán Ruiz"
+          >
+        </div>
+      </div>
+
+      <div class="perfil-contenido">
+
+        @if (idiomaService.esEspanol()) {
+
+          <span class="subtitulo">
+            Desarrollador de Software
+          </span>
+
+          <h2>
+            Enfocado en Backend, APIs y bases de datos
+          </h2>
+
+          <p>
+            Soy desarrollador de software con enfoque principalmente en
+            Backend. Trabajo con C#, Java, ASP.NET, JavaScript y SQL Server,
+            desarrollando aplicaciones web, APIs y bases de datos.
+          </p>
+
+          <p>
+            También tengo conocimientos de desarrollo Full Stack, participando
+            tanto en la lógica del servidor como en la creación de interfaces
+            para el usuario.
+          </p>
+
+          <p>
+            Me interesa construir soluciones eficientes, escalables y bien
+            estructuradas que respondan a diferentes necesidades empresariales.
+          </p>
+
+        } @else {
+
+          <span class="subtitulo">
+            Software Developer
+          </span>
+
+          <h2>
+            Focused on Backend, APIs and databases
+          </h2>
+
+          <p>
+            I am a software developer mainly focused on Backend development.
+            I work with C#, Java, ASP.NET, JavaScript and SQL Server,
+            developing web applications, APIs and databases.
+          </p>
+
+          <p>
+            I also have Full Stack development knowledge, participating
+            both in server-side logic and in the creation of user interfaces.
+          </p>
+
+          <p>
+            I am interested in building efficient, scalable and
+            well-structured solutions that respond to different business needs.
+          </p>
+
+        }
+
+        <div class="datos-personales">
+
+          <article>
+
+            @if (idiomaService.esEspanol()) {
+
+              <span>Nombre</span>
+              <strong>Kervin Rostrán Ruiz</strong>
+
+            } @else {
+
+              <span>Name</span>
+              <strong>Kervin Rostrán Ruiz</strong>
+
+            }
+
+          </article>
+
+          <article>
+
+            @if (idiomaService.esEspanol()) {
+
+              <span>Especialidad</span>
+              <strong>Backend y bases de datos</strong>
+
+            } @else {
+
+              <span>Specialization</span>
+              <strong>Backend and databases</strong>
+
+            }
+
+          </article>
+
+          <article>
+
+            @if (idiomaService.esEspanol()) {
+
+              <span>Formación</span>
+              <strong>Ingeniería de Software</strong>
+
+            } @else {
+
+              <span>Education</span>
+              <strong>Software Engineering</strong>
+
+            }
+
+          </article>
+
+          <article>
+
+            @if (idiomaService.esEspanol()) {
+
+              <span>Ubicación</span>
+              <strong>Costa Rica</strong>
+
+            } @else {
+
+              <span>Location</span>
+              <strong>Costa Rica</strong>
+
+            }
+
+          </article>
+
+        </div>
+
+        <div class="acciones">
+
+          <a
+            routerLink="/proyectos"
+            class="boton boton-principal"
+          >
+            @if (idiomaService.esEspanol()) {
+              Ver proyectos
+            } @else {
+              View projects
+            }
+          </a>
+
+          <a
+            routerLink="/contacto"
+            class="boton boton-secundario"
+          >
+            @if (idiomaService.esEspanol()) {
+              Contactarme
+            } @else {
+              Contact me
+            }
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="fortalezas">
+  <div class="contenedor">
+
+    <header class="titulo-secundario">
+
+      @if (idiomaService.esEspanol()) {
+
+        <span>Mi forma de trabajar</span>
+        <h2>Fortalezas profesionales</h2>
+
+      } @else {
+
+        <span>How I work</span>
+        <h2>Professional strengths</h2>
+
+      }
+
+    </header>
+
+    <div class="fortalezas-grid animar-entrada">
+
+      <article class="fortaleza-card">
+        <span class="numero">01</span>
+
+        @if (idiomaService.esEspanol()) {
+
+          <h3>Resolución de problemas</h3>
+
+          <p>
+            Analizo las necesidades del proyecto y desarrollo soluciones
+            estructuradas que permitan mejorar los procesos.
+          </p>
+
+        } @else {
+
+          <h3>Problem solving</h3>
+
+          <p>
+            I analyze project needs and develop structured solutions
+            that help improve processes.
+          </p>
+
+        }
+
+      </article>
+
+      <article class="fortaleza-card">
+        <span class="numero">02</span>
+
+        @if (idiomaService.esEspanol()) {
+
+          <h3>Aprendizaje continuo</h3>
+
+          <p>
+            Mantengo interés por conocer nuevas tecnologías, herramientas y
+            buenas prácticas de desarrollo.
+          </p>
+
+        } @else {
+
+          <h3>Continuous learning</h3>
+
+          <p>
+            I maintain an interest in learning new technologies,
+            tools and software development best practices.
+          </p>
+
+        }
+
+      </article>
+
+      <article class="fortaleza-card">
+        <span class="numero">03</span>
+
+        @if (idiomaService.esEspanol()) {
+
+          <h3>Responsabilidad</h3>
+
+          <p>
+            Trabajo con compromiso, organización y atención a los detalles
+            para cumplir con los objetivos establecidos.
+          </p>
+
+        } @else {
+
+          <h3>Responsibility</h3>
+
+          <p>
+            I work with commitment, organization and attention to detail
+            to achieve the established objectives.
+          </p>
+
+        }
+
+      </article>
+
+      <article class="fortaleza-card">
+        <span class="numero">04</span>
+
+        @if (idiomaService.esEspanol()) {
+
+          <h3>Trabajo en equipo</h3>
+
+          <p>
+            Valoro la comunicación, la colaboración y el intercambio de
+            conocimientos durante el desarrollo de un proyecto.
+          </p>
+
+        } @else {
+
+          <h3>Teamwork</h3>
+
+          <p>
+            I value communication, collaboration and knowledge sharing
+            throughout the development of a project.
+          </p>
+
+        }
+
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="identidad">
+  <div class="contenedor identidad-grid">
+
+    <article class="identidad-card">
+
+      @if (idiomaService.esEspanol()) {
+
+        <span>Misión</span>
+
+        <h2>Aportar valor mediante software</h2>
+
+        <p>
+          Desarrollar soluciones tecnológicas que aporten valor a las personas
+          y organizaciones mediante el uso de herramientas modernas,
+          eficientes y bien estructuradas.
+        </p>
+
+      } @else {
+
+        <span>Mission</span>
+
+        <h2>Creating value through software</h2>
+
+        <p>
+          Develop technological solutions that create value for people
+          and organizations through modern, efficient and
+          well-structured tools.
+        </p>
+
+      }
+
+    </article>
+
+    <article class="identidad-card">
+
+      @if (idiomaService.esEspanol()) {
+
+        <span>Visión</span>
+
+        <h2>Crecer como profesional</h2>
+
+        <p>
+          Convertirme en un profesional destacado en el área del desarrollo de
+          software, capaz de crear soluciones innovadoras y contribuir al
+          avance tecnológico.
+        </p>
+
+      } @else {
+
+        <span>Vision</span>
+
+        <h2>Growing as a professional</h2>
+
+        <p>
+          Become a highly skilled software development professional,
+          capable of creating innovative solutions and contributing
+          to technological advancement.
+        </p>
+
+      }
+
+    </article>
+
+    <article class="identidad-card">
+
+      @if (idiomaService.esEspanol()) {
+
+        <span>Valores</span>
+
+        <ul>
+          <li>Responsabilidad</li>
+          <li>Honestidad</li>
+          <li>Innovación</li>
+          <li>Trabajo en equipo</li>
+          <li>Aprendizaje continuo</li>
+        </ul>
+
+      } @else {
+
+        <span>Values</span>
+
+        <ul>
+          <li>Responsibility</li>
+          <li>Honesty</li>
+          <li>Innovation</li>
+          <li>Teamwork</li>
+          <li>Continuous learning</li>
+        </ul>
+
+      }
+
+    </article>
+
+
+    <section class="imagen-web">
+      <div class="contenedor">
+
+        <header class="imagen-web-encabezado">
+
+          @if (idiomaService.esEspanol()) {
+
+            <span>Identidad profesional</span>
+
+            <h2>Mi imagen web</h2>
+
+            <p>
+              Imagen web desarrollada durante el curso para representar mi
+              perfil profesional, formación, habilidades y experiencia en
+              desarrollo de software.
+            </p>
+
+          } @else {
+
+            <span>Professional identity</span>
+
+            <h2>My web image</h2>
+
+            <p>
+              Web image developed during the course to represent my
+              professional profile, education, skills and experience
+              in software development.
+            </p>
+
+          }
+
+        </header>
+
+        <div class="imagen-web-contenido">
+
+          <img
+            src="/Imagenes/ImagenWeb.png"
+            alt="Imagen web profesional de Kervin Rostrán Ruiz"
+          >
+
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</section>

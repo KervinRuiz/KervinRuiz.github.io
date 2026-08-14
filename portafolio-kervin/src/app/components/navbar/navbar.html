@@ -1,0 +1,136 @@
+<header class="encabezado">
+
+  <nav class="navbar contenedor">
+
+    <a
+      routerLink="/"
+      class="marca"
+      (click)="cerrarMenu()"
+    >
+
+      <img
+        src="/Imagenes/Logo.png"
+        alt="Logo de Kervin Rostrán Ruiz"
+      >
+
+      <div class="marca-texto">
+        <strong>Kervin Ruiz</strong>
+        <span>Software Developer</span>
+      </div>
+
+    </a>
+
+    <button
+      type="button"
+      class="boton-menu"
+      (click)="cambiarMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul
+      class="menu"
+      [class.menu-abierto]="menuAbierto"
+    >
+
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="activo"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="cerrarMenu()"
+        >
+          @if (idiomaService.esEspanol()) {
+            Inicio
+          } @else {
+            Home
+          }
+        </a>
+      </li>
+
+      <li>
+        <a
+          routerLink="/sobre-mi"
+          routerLinkActive="activo"
+          (click)="cerrarMenu()"
+        >
+          @if (idiomaService.esEspanol()) {
+            Sobre mí
+          } @else {
+            About me
+          }
+        </a>
+      </li>
+
+      <li>
+        <a
+          routerLink="/habilidades"
+          routerLinkActive="activo"
+          (click)="cerrarMenu()"
+        >
+          @if (idiomaService.esEspanol()) {
+            Habilidades
+          } @else {
+            Skills
+          }
+        </a>
+      </li>
+
+      <li>
+        <a
+          routerLink="/proyectos"
+          routerLinkActive="activo"
+          (click)="cerrarMenu()"
+        >
+          @if (idiomaService.esEspanol()) {
+            Proyectos
+          } @else {
+            Projects
+          }
+        </a>
+      </li>
+
+      <li>
+        <a
+          routerLink="/contacto"
+          routerLinkActive="activo"
+          (click)="cerrarMenu()"
+        >
+          @if (idiomaService.esEspanol()) {
+            Contacto
+          } @else {
+            Contact
+          }
+        </a>
+      </li>
+
+      <li class="contenedor-idioma">
+
+        <button
+          type="button"
+          class="boton-idioma"
+          (click)="cambiarIdioma()"
+          title="Cambiar idioma"
+        >
+
+          @if (idiomaService.esEspanol()) {
+            ES
+            <span>→</span>
+            EN
+          } @else {
+            EN
+            <span>→</span>
+            ES
+          }
+
+        </button>
+
+      </li>
+
+    </ul>
+
+  </nav>
+
+</header>

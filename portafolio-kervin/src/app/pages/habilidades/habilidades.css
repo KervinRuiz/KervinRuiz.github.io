@@ -1,0 +1,241 @@
+.habilidades {
+  min-height: 100vh;
+  padding: 130px 0 90px;
+  background-color: var(--color-principal);
+}
+
+.encabezado-seccion {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.encabezado-seccion > span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-enfasis);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.encabezado-seccion h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.encabezado-seccion p {
+  margin-top: 15px;
+  color: var(--color-texto-secundario);
+  font-size: 1.05rem;
+}
+
+.resumen-habilidades {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 50px;
+}
+
+.resumen-habilidades article {
+  padding: 24px;
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  text-align: center;
+  transition: var(--transicion);
+}
+
+.resumen-habilidades article:hover {
+  border-color: var(--color-enfasis);
+  transform: translateY(-5px);
+}
+
+.resumen-habilidades strong {
+  display: block;
+  color: var(--color-enfasis);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.55rem;
+}
+
+.resumen-habilidades span {
+  color: var(--color-texto-secundario);
+}
+
+.categorias {
+  display: grid;
+  gap: 30px;
+}
+
+.categoria-card {
+  padding: 34px;
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 14px;
+  transition: var(--transicion);
+}
+
+.categoria-card:hover {
+  border-color: var(--color-enfasis);
+  box-shadow: var(--sombra-verde);
+}
+
+.categoria-encabezado {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.categoria-etiqueta {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--color-enfasis);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.categoria-encabezado h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.cantidad {
+  padding: 7px 13px;
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.categoria-descripcion {
+  max-width: 850px;
+  margin-top: 14px;
+  color: var(--color-texto-secundario);
+}
+
+.tecnologias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.tecnologia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px;
+  background-color: var(--color-secundario);
+  border-left: 3px solid var(--color-enfasis);
+  border-radius: 8px;
+  transition: var(--transicion);
+}
+
+.tecnologia:hover {
+  background-color: var(--color-tarjeta-clara);
+  transform: translateY(-3px);
+}
+
+.tecnologia-informacion h3 {
+  color: var(--color-blanco);
+  font-size: 1rem;
+}
+
+.tecnologia-informacion span {
+  color: var(--color-texto-secundario);
+  font-size: 0.8rem;
+}
+
+.indicador {
+  display: flex;
+  width: 45px;
+  height: 8px;
+  overflow: hidden;
+  background-color: #252525;
+  border-radius: 20px;
+}
+
+.indicador span {
+  display: block;
+  height: 100%;
+  background-color: var(--color-enfasis);
+  border-radius: 20px;
+}
+
+.indicador.intermedio span {
+  width: 75%;
+}
+
+.indicador.basico span {
+  width: 45%;
+}
+
+.enfoque {
+  padding: 90px 0;
+  background-color: var(--color-tarjeta);
+  border-top: 1px solid var(--color-borde);
+}
+
+.enfoque-contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.etiqueta {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-enfasis);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.enfoque h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.enfoque p {
+  margin-bottom: 15px;
+  color: var(--color-texto-secundario);
+}
+
+@media screen and (max-width: 950px) {
+  .tecnologias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .resumen-habilidades,
+  .enfoque-contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .enfoque-contenido {
+    gap: 25px;
+  }
+
+  .categoria-encabezado {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .habilidades {
+    padding-top: 110px;
+  }
+
+  .tecnologias {
+    grid-template-columns: 1fr;
+  }
+
+  .categoria-card {
+    padding: 24px;
+  }
+}

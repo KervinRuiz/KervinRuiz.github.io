@@ -1,0 +1,136 @@
+.encabezado {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid #363636;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 75px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.marca img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.marca-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.marca-texto strong {
+  color: #39f58d;
+  font-family: 'Poppins', sans-serif;
+}
+
+.marca-texto span {
+  color: #c9c9c9;
+  font-size: 0.75rem;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.menu a {
+  color: #c9c9c9;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.activo {
+  color: #39f58d;
+}
+
+.boton-menu {
+  display: none;
+  padding: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.boton-menu span {
+  display: block;
+  width: 27px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #39f58d;
+}
+
+@media screen and (max-width: 820px) {
+  .boton-menu {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+    padding: 28px;
+    background-color: #000000;
+    border-bottom: 1px solid #363636;
+  }
+
+  .menu.menu-abierto {
+    display: flex;
+  }
+}
+.contenedor-idioma {
+  display: flex;
+  align-items: center;
+}
+
+.boton-idioma {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 13px;
+
+  background-color: transparent;
+  color: var(--color-enfasis);
+
+  border: 1px solid var(--color-enfasis);
+  border-radius: 6px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: var(--transicion);
+}
+
+.boton-idioma:hover {
+  background-color: var(--color-enfasis);
+  color: var(--color-principal);
+}
+
+.boton-idioma span {
+  font-size: 0.7rem;
+}

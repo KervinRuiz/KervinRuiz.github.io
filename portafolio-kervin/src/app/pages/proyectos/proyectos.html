@@ -1,0 +1,297 @@
+<section class="proyectos">
+
+  <div class="contenedor">
+
+    <header class="encabezado-seccion">
+
+      @if (idiomaService.esEspanol()) {
+
+        <span>Portafolio de trabajo</span>
+
+        <h1>Mis proyectos</h1>
+
+        <p>
+          Galería de proyectos desarrollados utilizando diferentes
+          tecnologías, lenguajes, bases de datos y arquitecturas de software.
+        </p>
+
+      } @else {
+
+        <span>Work portfolio</span>
+
+        <h1>My projects</h1>
+
+        <p>
+          Gallery of projects developed using different technologies,
+          programming languages, databases and software architectures.
+        </p>
+
+      }
+
+    </header>
+
+    <div class="filtros">
+
+      @for (categoria of categorias; track categoria) {
+
+        <button
+          type="button"
+          (click)="seleccionarCategoria(categoria)"
+          [class.activo]="categoriaSeleccionada === categoria"
+        >
+
+          @if (idiomaService.esEspanol()) {
+
+            {{ categoria }}
+
+          } @else {
+
+            {{ obtenerCategoriaIngles(categoria) }}
+
+          }
+
+        </button>
+
+      }
+
+    </div>
+
+    <div class="proyectos-grid animar-entrada">
+
+      @for (
+        proyecto of proyectosFiltrados;
+        track proyecto.titulo
+      ) {
+
+        <article class="proyecto-card">
+
+          <div class="proyecto-imagen">
+
+            <img
+              [src]="proyecto.imagen"
+              [alt]="idiomaService.esEspanol()
+                ? proyecto.titulo
+                : proyecto.tituloEn"
+            >
+
+            @if (proyecto.destacado) {
+
+              <span class="destacado">
+
+                @if (idiomaService.esEspanol()) {
+                  Destacado
+                } @else {
+                  Featured
+                }
+
+              </span>
+
+            }
+
+            <div class="imagen-overlay">
+
+              <button
+                type="button"
+                (click)="abrirProyecto(proyecto)"
+              >
+
+                @if (idiomaService.esEspanol()) {
+                  Ver detalles
+                } @else {
+                  View details
+                }
+
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="proyecto-contenido">
+
+            <span class="categoria">
+
+              @if (idiomaService.esEspanol()) {
+                {{ proyecto.categoria }}
+              } @else {
+                {{ obtenerCategoriaIngles(proyecto.categoria) }}
+              }
+
+            </span>
+
+            <h2>
+
+              @if (idiomaService.esEspanol()) {
+                {{ proyecto.titulo }}
+              } @else {
+                {{ proyecto.tituloEn }}
+              }
+
+            </h2>
+
+            <p>
+
+              @if (idiomaService.esEspanol()) {
+                {{ proyecto.descripcion }}
+              } @else {
+                {{ proyecto.descripcionEn }}
+              }
+
+            </p>
+
+            <div class="tecnologias">
+
+              @for (
+                tecnologia of proyecto.tecnologias;
+                track tecnologia
+              ) {
+
+                <span>
+                  {{ tecnologia }}
+                </span>
+
+              }
+
+            </div>
+
+            <button
+              type="button"
+              class="boton-detalles"
+              (click)="abrirProyecto(proyecto)"
+            >
+
+              @if (idiomaService.esEspanol()) {
+                Ver proyecto
+              } @else {
+                View project
+              }
+
+            </button>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+@if (proyectoSeleccionado) {
+
+  <div
+    class="modal"
+    (click)="cerrarProyecto()"
+  >
+
+    <div
+      class="modal-contenido"
+      (click)="$event.stopPropagation()"
+    >
+
+      <button
+        type="button"
+        class="cerrar"
+        (click)="cerrarProyecto()"
+      >
+        ×
+      </button>
+
+      <div class="modal-imagen">
+
+        <img
+          [src]="proyectoSeleccionado.imagen"
+          [alt]="idiomaService.esEspanol()
+            ? proyectoSeleccionado.titulo
+            : proyectoSeleccionado.tituloEn"
+        >
+
+      </div>
+
+      <div class="modal-informacion">
+
+        <span>
+
+          @if (idiomaService.esEspanol()) {
+            {{ proyectoSeleccionado.categoria }}
+          } @else {
+            {{ obtenerCategoriaIngles(proyectoSeleccionado.categoria) }}
+          }
+
+        </span>
+
+        <h2>
+
+          @if (idiomaService.esEspanol()) {
+            {{ proyectoSeleccionado.titulo }}
+          } @else {
+            {{ proyectoSeleccionado.tituloEn }}
+          }
+
+        </h2>
+
+        <p>
+
+          @if (idiomaService.esEspanol()) {
+            {{ proyectoSeleccionado.descripcion }}
+          } @else {
+            {{ proyectoSeleccionado.descripcionEn }}
+          }
+
+        </p>
+
+        <h3>
+
+          @if (idiomaService.esEspanol()) {
+            Tecnologías utilizadas
+          } @else {
+            Technologies used
+          }
+
+        </h3>
+
+        <div class="modal-tecnologias">
+
+          @for (
+            tecnologia of proyectoSeleccionado.tecnologias;
+            track tecnologia
+          ) {
+
+            <span>
+              {{ tecnologia }}
+            </span>
+
+          }
+
+        </div>
+
+        @if (proyectoSeleccionado.repositorio) {
+
+          <a
+            [href]="proyectoSeleccionado.repositorio"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="boton-modal"
+          >
+
+            @if (idiomaService.esEspanol()) {
+              Ver repositorio
+            } @else {
+              View repository
+            }
+
+          </a>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+}

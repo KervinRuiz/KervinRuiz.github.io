@@ -1,0 +1,143 @@
+.footer {
+  background-color: #111111;
+  border-top: 1px solid var(--color-borde);
+}
+
+.footer-principal {
+  display: grid;
+  grid-template-columns: 1.4fr 0.75fr 0.9fr 0.75fr;
+  gap: 45px;
+  padding-top: 65px;
+  padding-bottom: 55px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: fit-content;
+}
+
+.marca img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.marca div {
+  display: flex;
+  flex-direction: column;
+}
+
+.marca strong {
+  color: var(--color-enfasis);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+}
+
+.marca span {
+  color: var(--color-texto-secundario);
+  font-size: 0.8rem;
+}
+
+.footer-marca > p {
+  max-width: 390px;
+  margin-top: 20px;
+  color: var(--color-texto-secundario);
+}
+
+.footer-marca blockquote {
+  margin-top: 20px;
+  padding-left: 14px;
+  color: var(--color-blanco);
+  border-left: 3px solid var(--color-enfasis);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.footer-columna h2 {
+  margin-bottom: 20px;
+  color: var(--color-blanco);
+  font-size: 1.05rem;
+}
+
+.footer-columna nav,
+.lista-texto,
+.enlaces-sociales {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.footer-columna nav a,
+.enlaces-sociales a {
+  position: relative;
+  color: var(--color-texto-secundario);
+  transition: var(--transicion);
+}
+
+.footer-columna nav a::before,
+.enlaces-sociales a::before {
+  margin-right: 7px;
+  color: var(--color-enfasis);
+  content: '›';
+}
+
+.footer-columna nav a:hover,
+.enlaces-sociales a:hover {
+  color: var(--color-enfasis);
+  transform: translateX(4px);
+}
+
+.lista-texto span {
+  color: var(--color-texto-secundario);
+}
+
+.lista-texto span::before {
+  margin-right: 7px;
+  color: var(--color-enfasis);
+  content: '•';
+}
+
+.footer-inferior {
+  padding: 20px 0;
+  background-color: #080808;
+  border-top: 1px solid var(--color-borde);
+}
+
+.footer-inferior-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.footer-inferior p {
+  color: var(--color-texto-secundario);
+  font-size: 0.82rem;
+}
+
+.footer-inferior span {
+  margin: 0 7px;
+  color: var(--color-enfasis);
+}
+
+@media screen and (max-width: 1000px) {
+  .footer-principal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-principal {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-inferior-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,360 @@
+.sobre-mi {
+  min-height: 100vh;
+  padding: 130px 0 90px;
+  background-color: var(--color-principal);
+}
+
+.encabezado-seccion {
+  max-width: 700px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.encabezado-seccion span,
+.titulo-secundario span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-enfasis);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.encabezado-seccion h1,
+.titulo-secundario h2 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.encabezado-seccion p {
+  margin-top: 15px;
+  color: var(--color-texto-secundario);
+  font-size: 1.05rem;
+}
+
+.perfil-grid {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.perfil-imagen {
+  display: flex;
+  justify-content: center;
+}
+
+.marco-imagen {
+  position: relative;
+  width: min(390px, 100%);
+  padding: 12px;
+  background-color: var(--color-tarjeta);
+  border: 2px solid var(--color-enfasis);
+  border-radius: 18px;
+  box-shadow: var(--sombra-verde);
+}
+
+.marco-imagen::before {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  z-index: -1;
+  width: 75%;
+  height: 75%;
+  background-color: var(--color-secundario);
+  border-radius: 18px;
+  content: '';
+}
+
+.marco-imagen img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.subtitulo {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-enfasis);
+  font-weight: 700;
+}
+
+.perfil-contenido h2 {
+  margin-bottom: 25px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.perfil-contenido p {
+  margin-bottom: 16px;
+  color: var(--color-texto-secundario);
+}
+
+.datos-personales {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.datos-personales article {
+  padding: 17px;
+  background-color: var(--color-tarjeta);
+  border-left: 3px solid var(--color-enfasis);
+  border-radius: 6px;
+}
+
+.datos-personales span {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--color-texto-secundario);
+  font-size: 0.85rem;
+}
+
+.datos-personales strong {
+  color: var(--color-blanco);
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 32px;
+}
+
+.fortalezas {
+  padding: 90px 0;
+  background-color: var(--color-tarjeta);
+  border-top: 1px solid var(--color-borde);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.titulo-secundario {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.fortalezas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.fortaleza-card {
+  padding: 28px;
+  background-color: var(--color-secundario);
+  border-radius: 12px;
+  transition: var(--transicion);
+}
+
+.fortaleza-card:hover {
+  box-shadow: var(--sombra-verde);
+  transform: translateY(-7px);
+}
+
+.numero {
+  display: block;
+  margin-bottom: 17px;
+  color: var(--color-enfasis);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.fortaleza-card h3 {
+  margin-bottom: 12px;
+  color: var(--color-blanco);
+}
+
+.fortaleza-card p {
+  color: var(--color-blanco);
+}
+
+.identidad {
+  padding: 90px 0;
+  background-color: var(--color-principal);
+}
+
+.identidad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.identidad-card {
+  padding: 34px;
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 13px;
+  transition: var(--transicion);
+}
+
+.identidad-card:hover {
+  border-color: var(--color-enfasis);
+  transform: translateY(-5px);
+}
+
+.identidad-card span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--color-enfasis);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.identidad-card h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.identidad-card p,
+.identidad-card li {
+  color: var(--color-texto-secundario);
+}
+
+.identidad-card ul {
+  padding-left: 22px;
+}
+
+.identidad-card li {
+  margin-bottom: 7px;
+}
+
+.identidad-card li::marker {
+  color: var(--color-enfasis);
+}
+.imagen-web {
+  width: 100%;
+  padding: 90px 0;
+  background-color: var(--color-tarjeta);
+  border-top: 1px solid var(--color-borde);
+}
+
+.imagen-web .contenedor {
+  width: min(1150px, 90%);
+  margin: 0 auto;
+}
+
+.imagen-web-encabezado {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.imagen-web-encabezado span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-enfasis);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.imagen-web-encabezado h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.imagen-web-encabezado p {
+  max-width: 650px;
+  margin: 15px auto 0;
+  color: var(--color-texto-secundario);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.imagen-web-contenido {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 14px;
+  background-color: var(--color-principal);
+  border: 1px solid var(--color-borde);
+  border-radius: 15px;
+  transition: var(--transicion);
+}
+
+.imagen-web-contenido:hover {
+  border-color: var(--color-enfasis);
+  box-shadow: var(--sombra-verde);
+  transform: translateY(-5px);
+}
+
+.imagen-web-contenido img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 650px;
+  object-fit: contain;
+  border-radius: 9px;
+}
+.imagen-web .contenedor {
+  width: min(1150px, 90%);
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .imagen-web {
+    padding: 65px 0;
+  }
+
+  .imagen-web-contenido img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .fortalezas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .perfil-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .marco-imagen img {
+    height: 430px;
+  }
+
+  .perfil-contenido {
+    text-align: center;
+  }
+
+  .datos-personales {
+    text-align: left;
+  }
+
+  .acciones {
+    justify-content: center;
+  }
+
+  .identidad-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sobre-mi {
+    padding-top: 110px;
+  }
+
+  .datos-personales,
+  .fortalezas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .marco-imagen img {
+    height: 380px;
+  }
+
+  .acciones {
+    flex-direction: column;
+  }
+
+  .acciones .boton {
+    width: 100%;
+  }
+}

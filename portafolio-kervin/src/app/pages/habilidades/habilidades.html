@@ -1,0 +1,237 @@
+<section class="habilidades">
+  <div class="contenedor">
+
+    <header class="encabezado-seccion">
+
+      @if (idiomaService.esEspanol()) {
+
+        <span>Conocimientos técnicos</span>
+
+        <h1>Habilidades y tecnologías</h1>
+
+        <p>
+          Conocimientos adquiridos mediante proyectos académicos, personales
+          y prácticas de desarrollo de software.
+        </p>
+
+      } @else {
+
+        <span>Technical knowledge</span>
+
+        <h1>Skills and technologies</h1>
+
+        <p>
+          Knowledge acquired through academic projects, personal projects
+          and software development practice.
+        </p>
+
+      }
+
+    </header>
+
+    <div class="resumen-habilidades">
+
+      <article>
+        <strong>20+</strong>
+
+        <span>
+          @if (idiomaService.esEspanol()) {
+            Tecnologías
+          } @else {
+            Technologies
+          }
+        </span>
+      </article>
+
+      <article>
+        <strong>6</strong>
+
+        <span>
+          @if (idiomaService.esEspanol()) {
+            Áreas técnicas
+          } @else {
+            Technical areas
+          }
+        </span>
+      </article>
+
+      <article>
+        <strong>Backend</strong>
+
+        <span>
+          @if (idiomaService.esEspanol()) {
+            Área principal
+          } @else {
+            Main area
+          }
+        </span>
+      </article>
+
+    </div>
+
+    <div class="categorias animar-entrada">
+
+      @for (categoria of categorias; track categoria.titulo) {
+
+        <article class="categoria-card">
+
+          <header class="categoria-encabezado">
+
+            <div>
+              <span class="categoria-etiqueta">
+
+                @if (idiomaService.esEspanol()) {
+                  Área técnica
+                } @else {
+                  Technical area
+                }
+
+              </span>
+
+              <h2>
+                @if (idiomaService.esEspanol()) {
+                  {{ categoria.titulo }}
+                } @else {
+                  {{ categoria.tituloEn }}
+                }
+              </h2>
+            </div>
+
+            <span class="cantidad">
+
+              {{ categoria.habilidades.length }}
+
+              @if (idiomaService.esEspanol()) {
+                tecnologías
+              } @else {
+                technologies
+              }
+
+            </span>
+
+          </header>
+
+          <p class="categoria-descripcion">
+
+            @if (idiomaService.esEspanol()) {
+              {{ categoria.descripcion }}
+            } @else {
+              {{ categoria.descripcionEn }}
+            }
+
+          </p>
+
+          <div class="tecnologias">
+
+            @for (
+              habilidad of categoria.habilidades;
+              track habilidad.nombre
+            ) {
+
+              <div class="tecnologia">
+
+                <div class="tecnologia-informacion">
+
+                  <h3>
+                    {{ habilidad.nombre }}
+                  </h3>
+
+                  <span>
+
+                    @if (idiomaService.esEspanol()) {
+                      {{ habilidad.nivel }}
+                    } @else {
+                      {{ habilidad.nivelEn }}
+                    }
+
+                  </span>
+
+                </div>
+
+                <div
+                  class="indicador"
+                  [class.intermedio]="habilidad.nivel === 'Intermedio'"
+                  [class.basico]="habilidad.nivel === 'Básico'"
+                >
+                  <span></span>
+                </div>
+
+              </div>
+
+            }
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </div>
+</section>
+
+<section class="enfoque">
+  <div class="contenedor enfoque-contenido">
+
+    <div>
+
+      @if (idiomaService.esEspanol()) {
+
+        <span class="etiqueta">
+          Especialización
+        </span>
+
+        <h2>
+          Desarrollo Backend, APIs y bases de datos
+        </h2>
+
+      } @else {
+
+        <span class="etiqueta">
+          Specialization
+        </span>
+
+        <h2>
+          Backend development, APIs and databases
+        </h2>
+
+      }
+
+    </div>
+
+    <div>
+
+      @if (idiomaService.esEspanol()) {
+
+        <p>
+          Mi principal enfoque profesional se encuentra en el desarrollo
+          Backend, la creación de lógica de negocio, la integración mediante
+          APIs y la gestión de bases de datos relacionales.
+        </p>
+
+        <p>
+          También cuento con conocimientos en desarrollo frontend, aplicaciones
+          móviles, servicios en la nube, redes y herramientas de control de
+          versiones.
+        </p>
+
+      } @else {
+
+        <p>
+          My main professional focus is Backend development,
+          business logic creation, API integration and
+          relational database management.
+        </p>
+
+        <p>
+          I also have knowledge of frontend development, mobile applications,
+          cloud services, networking and version control tools.
+        </p>
+
+      }
+
+    </div>
+
+  </div>
+</section>

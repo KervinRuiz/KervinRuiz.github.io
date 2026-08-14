@@ -1,0 +1,233 @@
+<footer class="footer">
+
+  <div class="contenedor footer-principal">
+
+    <div class="footer-marca">
+
+      <a routerLink="/" class="marca">
+        <img
+          src="/Imagenes/Logo.png"
+          alt="Logo de Kervin Rostrán Ruiz"
+        >
+
+        <div>
+          <strong>Core Softworks</strong>
+          <span>Kervin Rostrán Ruiz</span>
+        </div>
+      </a>
+
+      @if (idiomaService.esEspanol()) {
+
+        <p>
+          Desarrollo de soluciones digitales mediante aplicaciones web,
+          sistemas empresariales, APIs y bases de datos.
+        </p>
+
+        <blockquote>
+          Transformando ideas en soluciones digitales
+        </blockquote>
+
+      } @else {
+
+        <p>
+          Development of digital solutions through web applications,
+          business systems, APIs and databases.
+        </p>
+
+        <blockquote>
+          Transforming ideas into digital solutions
+        </blockquote>
+
+      }
+
+    </div>
+
+    <div class="footer-columna">
+
+      <h2>
+        @if (idiomaService.esEspanol()) {
+          Navegación
+        } @else {
+          Navigation
+        }
+      </h2>
+
+      <nav>
+
+        <a routerLink="/">
+          @if (idiomaService.esEspanol()) {
+            Inicio
+          } @else {
+            Home
+          }
+        </a>
+
+        <a routerLink="/sobre-mi">
+          @if (idiomaService.esEspanol()) {
+            Sobre mí
+          } @else {
+            About me
+          }
+        </a>
+
+        <a routerLink="/habilidades">
+          @if (idiomaService.esEspanol()) {
+            Habilidades
+          } @else {
+            Skills
+          }
+        </a>
+
+        <a routerLink="/proyectos">
+          @if (idiomaService.esEspanol()) {
+            Proyectos
+          } @else {
+            Projects
+          }
+        </a>
+
+        <a routerLink="/contacto">
+          @if (idiomaService.esEspanol()) {
+            Contacto
+          } @else {
+            Contact
+          }
+        </a>
+
+      </nav>
+
+    </div>
+
+    <div class="footer-columna">
+
+      <h2>
+        @if (idiomaService.esEspanol()) {
+          Especialidades
+        } @else {
+          Specializations
+        }
+      </h2>
+
+      <div class="lista-texto">
+
+        <span>
+          @if (idiomaService.esEspanol()) {
+            Desarrollo Backend
+          } @else {
+            Backend Development
+          }
+        </span>
+
+        <span>APIs REST</span>
+
+        <span>
+          @if (idiomaService.esEspanol()) {
+            Bases de datos
+          } @else {
+            Databases
+          }
+        </span>
+
+        <span>
+          @if (idiomaService.esEspanol()) {
+            Aplicaciones web
+          } @else {
+            Web Applications
+          }
+        </span>
+
+        <span>
+          @if (idiomaService.esEspanol()) {
+            Aplicaciones móviles
+          } @else {
+            Mobile Applications
+          }
+        </span>
+
+      </div>
+
+    </div>
+
+    <div class="footer-columna">
+
+      <h2>
+        @if (idiomaService.esEspanol()) {
+          Contacto
+        } @else {
+          Contact
+        }
+      </h2>
+
+      <div class="enlaces-sociales">
+
+        <a
+          href="mailto:kervin.21ruiz@gmail.com"
+          aria-label="Enviar correo electrónico"
+        >
+          @if (idiomaService.esEspanol()) {
+            Correo
+          } @else {
+            Email
+          }
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/kervin-rostran"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/KervinRuiz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://wa.me/50660814537"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-inferior">
+    <div class="contenedor footer-inferior-contenido">
+
+      <p>
+        © {{ anioActual }} Kervin Rostrán Ruiz.
+
+        @if (idiomaService.esEspanol()) {
+          Todos los derechos reservados.
+        } @else {
+          All rights reserved.
+        }
+      </p>
+
+      <p>
+
+        @if (idiomaService.esEspanol()) {
+          Desarrollado con Angular
+        } @else {
+          Developed with Angular
+        }
+
+        <span>·</span>
+        Costa Rica
+
+      </p>
+
+    </div>
+  </div>
+
+</footer>

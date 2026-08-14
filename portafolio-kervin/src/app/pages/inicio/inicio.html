@@ -1,0 +1,118 @@
+<section class="hero">
+
+  <div class="contenedor hero-contenido">
+
+    <div class="hero-informacion animar-entrada">
+
+      @if (idiomaService.esEspanol()) {
+
+        <span class="saludo">
+          Hola, soy
+        </span>
+
+        <h1>Kervin Rostrán Ruiz</h1>
+
+        <h2>
+          Desarrollador de Software
+        </h2>
+
+        <p class="especialidad">
+          Backend · APIs · Bases de datos
+        </p>
+
+        <p class="descripcion">
+          Desarrollo aplicaciones web y soluciones empresariales utilizando
+          tecnologías como C#, Java, Angular, ASP.NET, JavaScript y SQL Server.
+          Mi principal interés se encuentra en la lógica de negocio,
+          creación de APIs y gestión de bases de datos.
+        </p>
+
+        <blockquote>
+          “Transformando ideas en soluciones digitales”
+        </blockquote>
+
+      } @else {
+
+        <span class="saludo">
+          Hi, I'm
+        </span>
+
+        <h1>Kervin Rostrán Ruiz</h1>
+
+        <h2>
+          Software Developer
+        </h2>
+
+        <p class="especialidad">
+          Backend · APIs · Databases
+        </p>
+
+        <p class="descripcion">
+          I develop web applications and business solutions using
+          technologies such as C#, Java, Angular, ASP.NET, JavaScript
+          and SQL Server. My main focus is business logic,
+          API development and database management.
+        </p>
+
+        <blockquote>
+          “Transforming ideas into digital solutions”
+        </blockquote>
+
+      }
+
+      <div class="acciones">
+
+        <a
+          routerLink="/proyectos"
+          class="boton boton-principal"
+        >
+          @if (idiomaService.esEspanol()) {
+            Ver proyectos
+          } @else {
+            View projects
+          }
+        </a>
+
+        <a
+          routerLink="/sobre-mi"
+          class="boton boton-secundario"
+        >
+          @if (idiomaService.esEspanol()) {
+            Conocer más
+          } @else {
+            Learn more
+          }
+        </a>
+
+        <a
+          href="/documents/cv-kervin-rostran.pdf"
+          download="CV-Kervin-Rostran-Ruiz.pdf"
+          class="boton boton-secundario"
+        >
+          @if (idiomaService.esEspanol()) {
+            Descargar CV
+          } @else {
+            Download CV
+          }
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-logo animar-entrada">
+
+      <div class="contenedor-logo">
+
+        <img
+          src="/Imagenes/Logo.png"
+          alt="Logo de Kervin Rostrán Ruiz"
+        >
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
