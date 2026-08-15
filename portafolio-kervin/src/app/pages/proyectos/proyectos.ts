@@ -55,7 +55,7 @@ export class Proyectos {
       descripcionEn:
         'System developed to manage sales, inventory, customers, invoicing and barcode operations.',
 
-      imagen: '/images/proyectos/punto-venta.jpg',
+      imagen: '/Imagenes/proyectos/PuntoVentas.jpg',
 
       tecnologias: [
         'C#',
@@ -80,7 +80,7 @@ export class Proyectos {
       descripcionEn:
         'Web application for managing contracts, employees and customers through a structured architecture.',
 
-      imagen: '/images/proyectos/contratos.jpg',
+      imagen: '/Imagenes/proyectos/License.jpg',
 
       tecnologias: [
         'ASP.NET MVC',
@@ -105,7 +105,7 @@ export class Proyectos {
       descripcionEn:
         'Application designed to manage products, stock levels and inventory movements.',
 
-      imagen: '/images/proyectos/videojuegos.jpg',
+      imagen: '/Imagenes/proyectos/Juegos.jpg',
 
       tecnologias: [
         'C#',
@@ -118,32 +118,6 @@ export class Proyectos {
 
       destacado: false
     },
-
-    {
-      titulo: 'Sistema para Restaurante',
-
-      tituloEn: 'Restaurant Management System',
-
-      descripcion:
-        'Solución web y móvil para administrar productos, pedidos, inventario y procesos del restaurante.',
-
-      descripcionEn:
-        'Web and mobile solution for managing products, orders, inventory and restaurant operations.',
-
-      imagen: '/images/proyectos/restaurante.jpg',
-
-      tecnologias: [
-        'React Native',
-        'Node.js',
-        'MySQL',
-        'APIs REST'
-      ],
-
-      categoria: 'Móvil',
-
-      destacado: false
-    },
-
     {
       titulo: 'Sistema para Taller Mecánico',
 
@@ -155,7 +129,7 @@ export class Proyectos {
       descripcionEn:
         'Modular system for managing customers, vehicles, repairs, employees, services and invoicing.',
 
-      imagen: '/images/proyectos/taller.jpg',
+      imagen: '/Imagenes/proyectos/Taller.jpg',
 
       tecnologias: [
         'C#',
